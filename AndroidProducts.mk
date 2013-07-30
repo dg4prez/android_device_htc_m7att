@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013 The CyanogenMod Project
+# Copyright 2012 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,11 +14,6 @@
 # limitations under the License.
 #
 
-# call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/m7att/m7att-vendor.mk)
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/gwe_m7.mk
 
-# common overlays
-DEVICE_PACKAGE_OVERLAYS += device/htc/m7-common/overlay-gsm
-
-# Inherit from m7-common
-$(call inherit-product, device/htc/m7-common/m7-common.mk)
